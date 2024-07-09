@@ -70,6 +70,7 @@ export default function Login() {
             <h1>snappy</h1>
           </div>
           <input
+            id="username"
             type="text"
             placeholder="Username"
             name="username"
@@ -78,6 +79,7 @@ export default function Login() {
           />
           <input
             type="password"
+            id="password"
             placeholder="Password"
             name="password"
             onChange={(e) => handleChange(e)}

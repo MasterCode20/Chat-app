@@ -13,7 +13,7 @@ export default function Welcome() {
   return (
     <Container>
       <img src={Robot} alt="" />
-      <h1>
+      <h1 classname = "chat-header">
         Welcome, <span>{userName}!</span>
       </h1>
       <h3>Please select a chat to Start messaging.</h3>
@@ -33,4 +33,8 @@ const Container = styled.div`
   span {
     color: #4e0eff;
   }
+
+.chat-header{
+  paddind:5px
+}
 `;

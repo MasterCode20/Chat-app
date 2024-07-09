@@ -1,3 +1,4 @@
+// ChatInput.js
 import React, { useState } from "react";
 import { BsEmojiSmileFill } from "react-icons/bs";
 import { IoMdSend } from "react-icons/io";
@@ -35,6 +36,7 @@ export default function ChatInput({ handleSendMsg }) {
       </div>
       <form className="input-container" onSubmit={(event) => sendChat(event)}>
         <input
+          id="message-box"  // Add this id for Selenium
           type="text"
           placeholder="type your message here"
           onChange={(e) => setMsg(e.target.value)}
