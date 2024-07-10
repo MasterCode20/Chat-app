@@ -33,15 +33,20 @@ jobs:
           cd public
           npm install
 
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libappindicator1 fonts-liberation
+
       - name: Run tests for backend
         run: |
           cd server
           npm test
 
-      - name: Run tests for frontend
+      - name: Run Selenium tests for frontend
         run: |
           cd public
-          npm test
+          npm run test:selenium
 
       - name: Build Docker images for frontend and backend
         run: |
