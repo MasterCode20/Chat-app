@@ -25,9 +25,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "node App.test.js",
     "eject": "react-scripts eject",
-    "test:selenium": "node tests/selenium.test.js"
+    "test:selenium": "node App.test.js"
   },
   "eslintConfig": {
     "extends": [
