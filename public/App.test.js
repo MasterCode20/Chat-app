@@ -1,8 +1,18 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 require('chromedriver');
 
+const options = new chrome.Options();
+options.addArguments('headless');
+options.addArguments('disable-gpu');
+options.addArguments('no-sandbox');
+options.addArguments('disable-dev-shm-usage');
+
 async function runTest() {
-  let driver = await new Builder().forBrowser('chrome').build();
+  let driver = await new Builder()
+    .forBrowser('chrome')
+    .setChromeOptions(options)
+    .build();
 
   try {
     // Accéder à la page de l'application
